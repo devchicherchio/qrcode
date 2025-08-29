@@ -1,0 +1,93 @@
+:root{
+  --bg1:#0f172a;
+  --bg2:#0b1220;
+  --fg:#ffffff;
+  --muted:#cbd5e1;
+  --card:#ffffff10;
+  --cardBorder:#ffffff1f;
+}
+
+*{ box-sizing:border-box; }
+html,body,#root{ height:100%; }
+body{
+  margin:0; font-family: Inter, system-ui, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--fg);
+  background:
+    radial-gradient(1200px 600px at 10% 10%, rgba(130,184,63,.15), transparent),
+    linear-gradient(180deg, var(--bg2), var(--bg1));
+}
+
+.app-shell{ min-height:100%; }
+
+.page-hero{
+  min-height:100vh; display:flex; align-items:center; justify-content:center;
+  padding: 16px;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--cardBorder);
+  border-radius: 20px;
+  padding: 28px;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  text-align: center;
+}
+
+.card.small{ max-width: 520px; }
+
+.card-header h2{ margin:0 0 6px 0; letter-spacing:.4px; }
+.card-header p{ margin:0; color: var(--muted); }
+
+.card-toolbar{
+  display:flex; align-items:center; justify-content:space-between;
+  margin-bottom: 8px;
+}
+
+.link{
+  background:none; border:none; color:var(--muted);
+  font-weight:600; cursor:pointer;
+}
+.link:hover{ text-decoration: underline; }
+
+.muted{ color: var(--muted); }
+
+.grid{
+  display:grid; gap:12px; margin-top:12px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.option-btn{
+  display:flex; align-items:center; gap:12px; width:100%;
+  padding:16px 18px; border-radius:16px; cursor:pointer;
+  background: #ffffff14; color:#fff; font-weight:600;
+  border: 1px solid #ffffff2e;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+  backdrop-filter: blur(4px);
+}
+.option-btn:hover{
+  transform: translateY(-2px);
+  background: #ffffff26;
+  box-shadow: 0 10px 20px rgba(0,0,0,.25);
+}
+
+.option-icon{
+  font-size: 20px; width:40px; height:40px; display:grid; place-items:center;
+  background:#ffffff21; border-radius:12px;
+}
+
+.arrow{ margin-left:auto; opacity:.7; }
+
+.qr-wrap{
+  background:#fff; padding:14px; border-radius:16px;
+  box-shadow: 0 10px 24px rgba(0,0,0,.25);
+  display:inline-grid; place-items:center; margin: 0 auto 10px;
+}
+
+.btn-outline{
+  background: transparent; color:#fff;
+  border: 1px solid #ffffff88; border-radius: 12px;
+  padding: 10px 14px; cursor: pointer;
+}
+.btn-outline:hover{ background: #ffffff14; }
